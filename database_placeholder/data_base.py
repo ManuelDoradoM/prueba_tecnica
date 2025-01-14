@@ -46,13 +46,16 @@ fleet = [
     }
 ]
 
-
+#Tamaño maximo de reservations
 total_reservation_length = 0
 
 #Reservas
 from models.reservation import Reservation
-
+from models.test_reservation import TestReservation
 from datetime import date
 
+reserva_ejemploA = Reservation(TestReservation('Joe Doe', date(2025,1,25), date(2025,1,28), 'AA111AA'))
+reserva_ejemploB = Reservation(TestReservation('Joe Doe', date(2025,1,25), date(2025,1,28), 'BB222BB'))
+reserva_ejemploC = Reservation(TestReservation('Joe Doe', date(2025,1,25), date(2025,1,28), 'CC333CC'))
 
-reservations = []
+reservations = [reserva_ejemploA, reserva_ejemploB, reserva_ejemploC]

@@ -1,0 +1,2 @@
+2025-01-14 14:19:43 | INFO | available_cars?date1=2025-01-14&date2=None
+2025-01-14 14:20:06 | INFO | Reserva: usuario='string' date_init=datetime.date(2025, 1, 14) date_finish=datetime.date(2025, 1, 14) car_id='AA111AA'
