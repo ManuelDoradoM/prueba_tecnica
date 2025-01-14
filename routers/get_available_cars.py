@@ -28,5 +28,5 @@ def get_available_cars_by_date(date1: date = date.today(), date2: date = None):
     Logger.add_to_log('warning', 'status_code = 400, "Fechas ingresadas invalidas."')
     raise HTTPException(
          status_code = 400,
-         detail = 'Fechas ingresadas invalidas.'
+         detail = 'Invalid dates.'
     )

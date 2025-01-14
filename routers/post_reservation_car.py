@@ -17,7 +17,7 @@ def post_booking(reservation: New_Reservation):
     if date_validation(reservation.date_init, reservation.date_finish) and booked_date_by_car(reservation.car_id, reservation.date_init, reservation.date_finish):
         
         res = booking_car(reservation)
-        reservas = responses.JSONResponse({'id': res.id, 'usuario': res.usuario, 'date_init': res.date_init.strftime('%Y,%m,%d'), 'date_finish': res.date_finish.strftime('%Y,%m,%d'), 'car_id': res.car_id})
+        reservas = responses.JSONResponse({'id': res.id, 'user': res.user, 'date_init': res.date_init.strftime('%Y,%m,%d'), 'date_finish': res.date_finish.strftime('%Y,%m,%d'), 'car_id': res.car_id})
         reservas.headers['Cache-Control'] = 'no-cache'
         return reservas
 
@@ -25,5 +25,5 @@ def post_booking(reservation: New_Reservation):
         Logger.add_to_log('warning', 'status_code = 400, "Fechas ingresadas invalidas."')
         raise HTTPException(
             status_code = 400,
-            detail = 'Fechas ingresadas invalidas.'
+            detail = 'Invalid dates.'
         )

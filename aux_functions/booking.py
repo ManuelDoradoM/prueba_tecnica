@@ -1,5 +1,6 @@
 from models.reservation import Reservation
 from database_placeholder import data_base
+from logger.utils.Logger import Logger
 
 
 def booking_car(reservation: Reservation):
@@ -14,5 +15,5 @@ def booking_car(reservation: Reservation):
             car['books'].append(res.id)
             break
 
+    Logger.add_to_log('info', 'Reservation created: {}'.format(res.id))
     return res
-    

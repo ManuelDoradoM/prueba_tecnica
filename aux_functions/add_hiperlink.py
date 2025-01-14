@@ -11,12 +11,12 @@ def add_hiperlink(car: dict, date1: date, date2: date):
             'body_schema': {
                 'type': 'New_Reservation',
                 'properties': {
-                    'usuario': {'type': 'string'},
+                    'user': {'type': 'string'},
                     'date_init': {'type': 'date'},
                     'date_finish': {'type': 'date'},
                     'car_id': {'type': 'string'}
                 },
-                'requiered': ['usuario', 'date_init', 'car_id']
+                'requiered': ['user', 'date_init', 'car_id']
             }
     }
     return car_copy
